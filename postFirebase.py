@@ -7,7 +7,6 @@ class FirebaseObj():
         self.key = self.db.generate_key()
 
     def uploadFirebase(self):
-        pdb.set_trace()
         nome = self.data["nome"]
         sobrenome = self.data["sobrenome"]
         cargo = self.data["cargo"]

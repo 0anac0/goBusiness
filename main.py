@@ -39,7 +39,6 @@ def con_firebase(key):
 def test():
     if request.method == 'POST':
         data = request.form
-        pdb.set_trace()
         fb_obj = FirebaseObj(data, db)
         fb_obj.uploadFirebase()
 

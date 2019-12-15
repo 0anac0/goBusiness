@@ -6,7 +6,7 @@ class QrImage():
         self.key= key
 
     def get_url(self):
-        self.domain= "https://0anac0.github.io/goBusiness/cards/"
+        self.domain= "127.0.0.1:5000/cards/"
         self.url = self.domain+self.key
         return self.url
 

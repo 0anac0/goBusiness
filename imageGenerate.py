@@ -14,8 +14,8 @@ class CardBusiness():
         self.txt = Image.new('RGBA', self.base.size, (255, 255, 255, 0))
 
         # Getting the font using both the size and font path already setted
-        self.font = ImageFont.truetype('fonts/AvertaBlack.otf', 80)
-        self.font2 = ImageFont.truetype('fonts/Averta.otf', 40)
+        self.font = ImageFont.truetype('fonts/AvertaBlack.otf', 90)
+        self.font2 = ImageFont.truetype('fonts/Averta.otf', 30)
 
         # Getting a drawing context on the 'txt' blank image
         self.d = ImageDraw.Draw(self.txt)
@@ -29,8 +29,8 @@ class CardBusiness():
 
         self.d.text((450, 190), self.data["Sobrenome"], font = self.font, fill=(0, 91, 170, 255))
 
-
-        self.d.text((450, 300), self.data["Cargo"], font = self.font2, fill= (10, 10, 10, 255))
+        self.d.text((450, 350), self.data["Cargo"], font = self.font2, fill= (10, 10, 10, 255))
+        self.d.text((450,400), "+55 "+self.data["Telefone"], font = self.font2, fill = (10,10,10,255))
 
         self.out = Image.alpha_composite(self.base, self.txt)
 
